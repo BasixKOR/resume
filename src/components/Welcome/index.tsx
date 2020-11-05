@@ -1,23 +1,42 @@
-import { Avatar, Flex, Text } from '@chakra-ui/core';
+import {
+  Avatar,
+  Center,
+  Flex,
+  Text,
+  Box,
+  useBreakpointValue,
+} from '@chakra-ui/core';
+
+import Menu from 'components/Welcome/Menu';
 
 function Welcome(): JSX.Element {
+  const name = useBreakpointValue({
+    base: 'Basix',
+    sm: 'Sung Jeon',
+    md: 'Sung Jeon (Basix)',
+  });
+
   return (
-    <Flex
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      h="xl"
-      w="100vw"
-      bgColor="brand"
-    >
-      <Avatar name="Basix" src="/basixlab.png" size="2xl" />
-      <Text fontSize="4xl" mt="8">
-        Sung Jeon
-      </Text>
-      <Text fontSize="xl" mt="4">
-        Web Developer
-      </Text>
-    </Flex>
+    <>
+      <Menu />
+      <Center as="header" h="xl" w="100vw" bgColor="brand">
+        <Flex
+          borderWidth="px"
+          borderRadius="lg"
+          bgColor="white"
+          alignItems="center"
+          p="8"
+        >
+          <Avatar name="Basix" src="/basixlab.png" size="2xl" />
+          <Box textAlign="right" ml="8">
+            <Text fontSize="4xl" color="black">{name}</Text>
+            <Text fontSize="xl" color="gray.400">
+              Web Developer
+            </Text>
+          </Box>
+        </Flex>
+      </Center>
+    </>
   );
 }
 
