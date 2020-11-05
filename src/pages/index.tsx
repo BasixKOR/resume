@@ -1,5 +1,3 @@
-const Index = () => (
-  'b'
-)
+const Index = () => 'b';
 
-export default Index
+export default Index;
