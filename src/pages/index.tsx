@@ -1,6 +1,6 @@
 import Welcome from 'components/Welcome'
 
-const Index = () => (
+const Index: React.FC = () => (
   <Welcome />
 );
 

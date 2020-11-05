@@ -1,7 +1,6 @@
 import { Avatar, Flex, Text } from '@chakra-ui/core';
-import { ReactNode } from 'react';
 
-function Welcome(): ReactNode {
+function Welcome(): JSX.Element {
   return (
     <Flex
       direction="column"
