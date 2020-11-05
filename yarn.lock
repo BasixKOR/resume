@@ -2086,7 +2086,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/system@npm:1.0.0-rc.8, @chakra-ui/system@npm:^1.0.0-next.3":
+"@chakra-ui/system@npm:1.0.0-rc.8":
   version: 1.0.0-rc.8
   resolution: "@chakra-ui/system@npm:1.0.0-rc.8"
   dependencies:
@@ -9672,7 +9672,6 @@ typescript@4.0.5:
   dependencies:
     "@chakra-ui/core": ^1.0.0-rc.8
     "@chakra-ui/icons": ^1.0.0-rc.8
-    "@chakra-ui/system": ^1.0.0-next.3
     "@emotion/core": ^10.1.1
     "@types/node": ^14.14.6
     "@types/prettier": ^2
