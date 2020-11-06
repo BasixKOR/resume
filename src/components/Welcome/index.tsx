@@ -28,7 +28,12 @@ function Welcome(): JSX.Element {
   return (
     <>
       <Menu />
-      <Center as="header" h="xl" w="100vw" bgColor="brand">
+      <Center
+        as="header"
+        h="xl"
+        w="100vw"
+        bgImage="linear-gradient(126deg, #30aaef 0%, #30bfef 100%)"
+      >
         <Flex
           borderWidth="px"
           borderRadius="lg"
