@@ -1,3 +1,5 @@
+import 'intersection-observer';
+
 import { ChakraProvider } from '@chakra-ui/core';
 
 import theme from '../theme';

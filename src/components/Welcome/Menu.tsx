@@ -1,6 +1,10 @@
 import { Flex, Button, Spacer, Switch, useColorMode } from '@chakra-ui/core';
 
-function Menu(): JSX.Element {
+export interface MenuProps {
+  useBackground: boolean;
+}
+
+function Menu({ useBackground }: MenuProps): JSX.Element {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -13,6 +17,7 @@ function Menu(): JSX.Element {
       left="0"
       w="100vw"
       boxSizing="border-box"
+      bgColor={useBackground ? 'brand' : ''}
     >
       <Button variant="link" colorScheme="black" ml="4">
         Home

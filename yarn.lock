@@ -5918,6 +5918,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"intersection-observer@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "intersection-observer@npm:0.11.0"
+  checksum: 251c369eec0834da2e248cf1827d00332eca3a6aba4d6d216afa566d29ee7bf28e537838c582a246860b5df2b2ccdace2dcdd16fd7edb70dff4f28aba3aea7ec
+  languageName: node
+  linkType: hard
+
 "invariant@npm:^2.2.2, invariant@npm:^2.2.4":
   version: 2.2.4
   resolution: "invariant@npm:2.2.4"
@@ -9682,6 +9689,7 @@ typescript@4.0.5:
     eslint: ^7.12.1
     eslint-config-prettier: ^6.15.0
     framer-motion: ^2.9.4
+    intersection-observer: ^0.11.0
     next: ^10.0.1
     prettier: ^2.1.2
     react: ^16.14.0
