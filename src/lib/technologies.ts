@@ -19,6 +19,7 @@ export async function getTechnologyContents(): Promise<TechnologyContent[]> {
 
   const filenames = await fs.readdir(directory);
   for (const filename of filenames) {
+    if (!filename.endsWith('.json')) continue;
     const content = await fs.readFile(path.join(directory, filename));
     cache.push(JSON.parse(content.toString('utf-8')));
   }
