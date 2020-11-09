@@ -1,7 +1,30 @@
-import Welcome from 'components/Welcome'
+import { Stack } from '@chakra-ui/core';
+import { GetStaticProps } from 'next';
 
-const Index: React.FC = () => (
-  <Welcome />
+import Technologies from 'components/Technologies';
+import Welcome from 'components/Welcome';
+
+import { getTechnologyContents, TechnologyContent } from 'lib/technologies';
+
+interface IndexProps {
+  technologies: TechnologyContent[];
+}
+
+const Index: React.FC<IndexProps> = ({ technologies }) => (
+  <>
+    <Welcome />
+    <Stack>
+      <Technologies technologies={technologies} />
+    </Stack>
+  </>
 );
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      technologies: await getTechnologyContents(),
+    },
+  };
+};
 
 export default Index;
