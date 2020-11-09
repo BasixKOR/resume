@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: public/images/uploaded
+public_folder: images/uploaded
+slug:
+  clean_accents: true
+collections:
+  - name: technologies
+    label: Technologies
+    folder: src/contents/technologies
+    format: json
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Icon
+        name: thumbnail
+        widget: image
