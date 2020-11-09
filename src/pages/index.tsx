@@ -13,7 +13,7 @@ interface IndexProps {
 const Index: React.FC<IndexProps> = ({ technologies }) => (
   <>
     <Welcome />
-    <Stack>
+    <Stack mt="4">
       <Technologies technologies={technologies} />
     </Stack>
   </>

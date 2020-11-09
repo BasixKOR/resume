@@ -1,16 +1,17 @@
 import {
-  Box,
-  BoxProps,
+  Container,
+  ContainerProps,
   Heading,
   Wrap,
   WrapItem,
   useTheme,
+  Tooltip,
 } from '@chakra-ui/core';
 import Image from 'next/image';
 
 import type { TechnologyContent } from 'lib/technologies';
 
-export interface TechnologiesProps extends BoxProps {
+export interface TechnologiesProps extends ContainerProps {
   technologies: TechnologyContent[];
 }
 
@@ -21,21 +22,23 @@ function Technologies({
   const theme = useTheme();
 
   return (
-    <Box {...props}>
+    <Container {...props}>
       <Heading>Technologies</Heading>
-      <Wrap>
+      <Wrap mt="2" spacing="2">
         {technologies.map((tech) => (
           <WrapItem key={tech.title}>
-            <Image
-              src={tech.thumbnail}
-              alt={tech.title}
-              width={theme.sizes.sm}
-              height={theme.sizes.sm}
-            />
+            <Tooltip label={tech.title}>
+              <Image
+                src={tech.thumbnail}
+                alt={tech.title}
+                width={theme.sizes.lg}
+                height={theme.sizes.lg}
+              />
+            </Tooltip>
           </WrapItem>
         ))}
       </Wrap>
-    </Box>
+    </Container>
   );
 }
 
