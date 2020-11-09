@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write src",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.8",
