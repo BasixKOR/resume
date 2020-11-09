@@ -8,7 +8,7 @@ export interface TechnologyContent {
   /**
    * @returns {string} The path of the image.
    */
-  icon: string;
+  thumbnail: string;
 }
 
 let cache: TechnologyContent[] | null = null;

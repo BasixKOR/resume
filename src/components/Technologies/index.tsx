@@ -25,9 +25,9 @@ function Technologies({
       <Heading>Technologies</Heading>
       <Wrap>
         {technologies.map((tech) => (
-          <WrapItem>
+          <WrapItem key={tech.title}>
             <Image
-              src={tech.icon}
+              src={tech.thumbnail}
               alt={tech.title}
               width={theme.sizes.sm}
               height={theme.sizes.sm}
