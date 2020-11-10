@@ -6,8 +6,8 @@ import {
   WrapItem,
   useTheme,
   Tooltip,
+  Img,
 } from '@chakra-ui/core';
-import Image from 'next/image';
 
 import type { TechnologyContent } from 'lib/technologies';
 
@@ -28,12 +28,7 @@ function Technologies({
         {technologies.map((tech) => (
           <WrapItem key={tech.title}>
             <Tooltip label={tech.title}>
-              <Image
-                src={tech.thumbnail}
-                alt={tech.title}
-                width={theme.sizes.lg}
-                height={theme.sizes.lg}
-              />
+              <Img src={tech.thumbnail} alt={tech.title} boxSize="5ch" />
             </Tooltip>
           </WrapItem>
         ))}
