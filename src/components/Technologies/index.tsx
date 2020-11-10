@@ -4,7 +4,6 @@ import {
   Heading,
   Wrap,
   WrapItem,
-  useTheme,
   Tooltip,
   Img,
 } from '@chakra-ui/core';
@@ -19,8 +18,6 @@ function Technologies({
   technologies,
   ...props
 }: TechnologiesProps): JSX.Element {
-  const theme = useTheme();
-
   return (
     <Container {...props}>
       <Heading>Technologies</Heading>
